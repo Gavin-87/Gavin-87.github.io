@@ -3,18 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
-    <!-- 引入样式文件 -->
+    <title>彭翎芸 | 个人简历</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">👋 欢迎来到我的网页</h1>
-        <p class="intro">这是我用 HTML + CSS 做的第一个个人主页，部署在 GitHub Pages 上。</p>
-        <div class="info-card">
-            <h2>关于我</h2>
-            <p>一名正在学习编程的学生，喜欢捣鼓代码和分享技术。</p>
-        </div>
-    </div>
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="name">彭翎芸</h1>
+            <p class="subtitle">网络工程在读 / 全栈学习中</p>
+            <div class="contact-links">
+                <a href="mailto:zn781218@163.com" class="contact-link">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M22 6l-10 7L2 6"/>
+                    </svg>
+                    zn781218@163.com
+                </a>
+                <a href="https://github.com/Gavin-87" target="_blank" rel="noopener" class="contact-link">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    github.com/Gavin-87
+                </a>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section education">
+            <h2 class="section-title">教育背景</h2>
+            <div class="education-card">
+                <div class="education-header">
+                    <h3 class="school-name">浙江传媒学院</h3>
+                    <span class="education-period">2024至今</span>
+                </div>
+                <p class="education-detail">媒体工程学院 · 24网络工程2班</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills">
+            <h2 class="section-title">技能</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3 class="skill-group-title">语言</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group-title">框架/库</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">EasyX</span>
+                        <span class="skill-tag">Tkinter</span>
+                        <span class="skill-tag">ECharts</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Pillow</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group-title">数据库</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group-title">工具</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Visual Studio</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects">
+            <h2 class="section-title">项目经历</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3 class="project-name">校园活动推荐系统</h3>
+                    <p class="project-desc">前后端分离的校园内容管理与AI推荐平台。后端 Flask + MySQL，实现用户登录、内容发布/评论/浏览历史、多表联查、AI选题推荐（腾讯混元大模型，含TC3-HMAC-SHA256签名鉴权）。前端原生 HTML/CSS/JS + ECharts 数据可视化。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">ECharts</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3 class="project-name">大鱼吃小鱼游戏</h3>
+                    <p class="project-desc">C++ 面向对象游戏开发，EasyX 图形库。实现角色移动、碰撞检测、资源加载、游戏模式切换。自定义透明图片渲染、按钮交互、游戏状态管理。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">EasyX</span>
+                        <span class="tech-tag">Visual Studio</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3 class="project-name">学生信息管理系统</h3>
+                    <p class="project-desc">Python + Tkinter 桌面应用，Excel 作为数据存储。实现登录验证、学生信息增删改查、按学号搜索。集成 Matplotlib 饼图统计各科成绩分布。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Tkinter</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">xlrd/xlutils</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="https://github.com/Gavin-87" target="_blank" rel="noopener" class="footer-link">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="mailto:zn781218@163.com" class="footer-link">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M22 6l-10 7L2 6"/>
+                    </svg>
+                    zn781218@163.com
+                </a>
+            </div>
+            <p class="copyright">© 2025 彭翎芸</p>
+        </footer>
+    </main>
 </body>
 </html>
